@@ -53,11 +53,12 @@ RequestsSecurity = {
 }
 
 
-Fasttext = {
-    "name": "Fasttext language recognition",
-    "pip": ['fasttext'],
-    "description": "Fasttext is a text classification library capable of detecting 176 languages.",
-    "instruction": "https://github.com/facebookresearch/fastText/#requirements"
+# Substituir Fasttext por spaCy e langdetect
+LangDetect = {
+    "name": "Language detection",
+    "pip": ['spacy', 'langdetect'],
+    "description": "Language detection using spaCy and langdetect.",
+    "instruction": "https://spacy.io/usage and https://pypi.org/project/langdetect/"
 }
 
 
@@ -171,7 +172,7 @@ PYDUB = {
 
 
 
-OPTIONAL_REQUIREMENTS = [PortAudio, RequestsSecurity, FFMPEG, ESPEAK, WKHTMLTOPDF, Fasttext, HTOP, AKINATOR, PYDUB]
+OPTIONAL_REQUIREMENTS = [PortAudio, RequestsSecurity, FFMPEG, ESPEAK, WKHTMLTOPDF, LangDetect, HTOP, AKINATOR, PYDUB]
 
 
 if not sys.platform == "darwin":
